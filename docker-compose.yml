@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  dotnet:
+    build:
+      context: .
+      dockerfile: Dockerfile.dotnet
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./proj_x:/proj_x
+    command: dotnet watch --project newweb run --urls "http://0.0.0.0:8020/" 
+    ports:
+      - "8020:8020"

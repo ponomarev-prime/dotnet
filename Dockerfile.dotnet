@@ -1,0 +1,19 @@
+FROM ubuntu:22.04
+
+RUN apt-get update && apt-get install -y \
+curl \
+wget \
+build-essential \
+unzip \
+libicu-dev
+
+COPY /setup.sh /setup.sh
+RUN /setup.sh
+
+COPY ./proj_x /proj_x
+
+WORKDIR /proj_x
+
+EXPOSE 8020
+
+CMD ["dotnet" "run" "web"]
