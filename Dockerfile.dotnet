@@ -9,7 +9,6 @@ libicu-dev
 
 COPY ./dotnet-sdk /dotnet-sdk
 COPY ./scr-my /scr-my
-COPY ./proj_x /proj_x
 
 RUN /scr-my/export4bash.sh
 

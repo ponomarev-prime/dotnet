@@ -58,5 +58,5 @@ PS C:\Users\ponom\Documents\CODE\dotnet> docker build -t my-dotnet-xxx --progres
 ```
 r
 ```
-PS C:\Users\ponom\Documents\CODE\dotnet> docker run -it -p 8020:8020 --rm my-dotnet-xxx sh
+PS C:\Users\ponom\Documents\CODE\dotnet> docker run -it -p 8020:8020 --rm my-dotnet-xxx bash
 ```
